@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Government Websites | Types & Technologies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a4e8e;
+            --secondary: #ff6b35;
+            --accent: #4caf50;
+            --light: #f0f5ff;
+            --dark: #0d2d62;
+            --card: #ffffff;
+            --text: #333;
+            --light-text: #666;
+            --border: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f5 100%);
+            padding: 0;
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--dark), var(--primary));
+            color: white;
+            padding: 1.5rem 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid white;
+        }
+
+        .logo-icon i {
+            font-size: 1.8rem;
+        }
+
+        .logo-text h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .tags {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 20%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 2rem;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            width: 180px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            color: var(--primary);
+            margin: 3rem 0 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 2rem 0;
+        }
+
+        .category-card {
+            background: var(--card);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            background: linear-gradient(to right, var(--primary), var(--dark));
+            color: white;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .card-header i {
+            font-size: 1.8rem;
+            margin-right: 15px;
+        }
+
+        .card-header h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.4rem;
+        }
+
+        .card-content {
+            padding: 1.8rem;
+            flex-grow: 1;
+        }
+
+        .card-content p {
+            margin-bottom: 1.2rem;
+            color: var(--light-text);
+        }
+
+        .card-content ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 1.2rem;
+        }
+
+        .card-content li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.8rem;
+            position: relative;
+        }
+
+        .card-content li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .card-content a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+        }
+
+        .card-content a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        .feedback-section {
+            background: linear-gradient(135deg, #f0f5ff 0%, #e6eeff 100%);
+            padding: 4rem 0;
+            margin: 4rem 0;
+            position: relative;
+        }
+
+        .feedback-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            padding: 40px;
+            background: white;
+            box-sizing: border-box;
+        }
+
+        .feedback-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .user-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+            color: white;
+            font-size: 2.5rem;
+        }
+
+        .user-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .user-role {
+            color: var(--secondary);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .feedback-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto 25px;
+            color: var(--light-text);
+            font-style: italic;
+            position: relative;
+        }
+
+        .feedback-text::before,
+        .feedback-text::after {
+            content: "" ";
+ font-size: 3rem;
+            color: var(--secondary);
+            opacity: 0.2;
+            position: absolute;
+        }
+
+        .feedback-text::before {
+            top: -20px;
+            left: -30px;
+        }
+
+        .feedback-text::after {
+            bottom: -40px;
+            right: -30px;
+            transform: rotate(180deg);
+        }
+
+        .rating {
+            color: #ffc107;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 15px;
+        }
+
+        .carousel-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1.2rem;
+        }
+
+        .carousel-btn:hover {
+            background: var(--secondary);
+            transform: scale(1.1);
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            background: var(--primary);
+            transform: scale(1.2);
+        }
+
+        .tech-section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin: 4rem 0;
+        }
+
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        .tech-table th {
+            background: linear-gradient(to right, var(--primary), var(--dark));
+            color: white;
+            text-align: left;
+            padding: 1.2rem 1.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+        }
+
+        .tech-table td {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tech-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tech-table tr:nth-child(even) {
+            background-color: rgba(26, 78, 142, 0.05);
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-item {
+            background: rgba(26, 78, 142, 0.1);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        footer {
+            background: linear-gradient(135deg, var(--dark), var(--primary));
+            color: white;
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-section h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .footer-links i {
+            color: var(--secondary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+
+            .stats {
+                flex-wrap: wrap;
+            }
+
+            .tech-section {
+                padding: 20px;
+            }
+
+            .feedback-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>GovTech India</h1>
+                        <span>Digital Transformation Initiative</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <div class="tag">#DigitalIndia</div>
+                    <div class="tag">#Egovernance</div>
+                    <div class="tag">#GovTech</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Indian Government Websites: Types & Technologies</h2>
+                <p>Exploring the digital landscape of India's e-Governance initiatives under the Digital India program
+                </p>
+
+                <div class="stats">
+                    <div class="stat-box">
+                        <div class="stat-number">50M+</div>
+                        <div class="stat-label">Daily Users</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">8K+</div>
+                        <div class="stat-label">Services Offered</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Citizen Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <section>
+            <h2 class="section-title">Purpose of Government Websites</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem; max-width: 900px;">
+                Government websites in India are designed to offer transparency, ease of access, and digital services to
+                citizens, businesses, and administrative departments. These websites are part of India's ambitious
+                Digital India initiative, which aims to transform India into a digitally empowered society and knowledge
+                economy. Through these digital platforms, the government provides essential services, information
+                dissemination, grievance redressal mechanisms, and administrative tools that streamline governance and
+                improve citizen engagement.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="section-title">Major Categories of Indian Government Websites</h2>
+            <div class="categories">
+                <div class="category-card">
+                    <div class="card-header">
+                        <i class="fas fa-info-circle"></i>
+                        <h3>Informational Portals</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>These portals provide valuable information, including news, government schemes, and important
+                            updates.</p>
+                        <ul>
+                            <li><a href="https://india.gov.in" target="_blank">india.gov.in</a> - The National Portal of
+                                India</li>
+                            <li><a href="https://www.mygov.in" target="_blank">mygov.in</a> - Citizen Engagement
+                                Platform</li>
+                            <li><a href="https://pib.gov.in" target="_blank">pressinformationbureau.gov.in</a> -
+                                Government Press Releases</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="card-header">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Service Portals</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>These portals allow citizens to access various online government services.</p>
+                        <ul>
+                            <li><a href="https://aadhaar.uidai.gov.in" target="_blank">aadhaar.uidai.gov.in</a> -
+                                Aadhaar Services</li>
+                            <li><a href="https://incometaxindiaefiling.gov.in"
+                                    target="_blank">incometaxindiaefiling.gov.in</a> - Income Tax Filing</li>
+                            <li><a href="https://passportindia.gov.in" target="_blank">passportindia.gov.in</a> -
+                                Passport Services</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="card-header">
+                        <i class="fas fa-users-cog"></i>
+                        <h3>Administrative Portals</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Designed for government staff to carry out inter-departmental processes and manage data.</p>
+                        <ul>
+                            <li><a href="https://eoffice.gov.in" target="_blank">eoffice.gov.in</a> - Paperless office
+                                solution</li>
+                            <li><a href="https://pgportal.gov.in" target="_blank">pgportal.gov.in</a> - Grievance
+                                Redressal Portal</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="card-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Recruitment & Education</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>These portals provide job opportunities, exam results, and application forms.</p>
+                        <ul>
+                            <li><a href="https://upsc.gov.in" target="_blank">upsc.gov.in</a> - Union Public Service
+                                Commission</li>
+                            <li><a href="http://ssc.nic.in" target="_blank">ssc.nic.in</a> - Staff Selection Commission
+                            </li>
+                            <li><a href="https://nta.ac.in" target="_blank">nta.ac.in</a> - National Testing Agency</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="card-header">
+                        <i class="fas fa-comments"></i>
+                        <h3>Grievance Redressal</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Platforms where citizens can file complaints regarding government services.</p>
+                        <ul>
+                            <li><a href="https://pgportal.gov.in" target="_blank">pgportal.gov.in</a> - Public Grievance
+                                Portal</li>
+                            <li><a href="https://e-daakhil.nic.in" target="_blank">e-daakhil.nic.in</a> - Consumer
+                                Redressal Portal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div
+            style="background:#fff; padding:30px; margin-top:40px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.05);">
+            <h2 style="color:#2c3e50; margin-bottom:20px;">📝 Blog Review & Comments</h2>
+            <form>
+                <div style="margin-bottom:15px;">
+                    <label for="nameInput" style="display:block; font-weight:600; margin-bottom:5px;">Your Name</label>
+                    <input type="text" id="nameInput" placeholder="Enter your name" required
+                        style="width:100%; padding:10px; border:1px solid #ccc; border-radius:5px;" />
+                </div>
+                <div style="margin-bottom:15px;">
+                    <label for="commentInput" style="display:block; font-weight:600; margin-bottom:5px;">Your
+                        Comment</label>
+                    <textarea id="commentInput" rows="4" placeholder="Share your thoughts..." required
+                        style="width:100%; padding:10px; border:1px solid #ccc; border-radius:5px;"></textarea>
+                </div>
+                <button type="submit"
+                    style="background-color:#007bff; color:white; padding:10px 20px; border:none; border-radius:5px;">
+                    Post Comment
+                </button>
+            </form>
+
+            <!-- <div style="margin-top:40px;">
+                <h4 style="margin-bottom:20px;">💬 Recent Comments</h4>
+
+                <div style="background:#f9f9f9; padding:15px; border-radius:8px; margin-bottom:15px;">
+                    <strong>Anjali R.</strong> <span style="color:#888;">– Aug 4, 2025</span>
+                    <p style="margin-top:8px;">Very informative blog! Helped me understand how different government
+                        sites work.</p>
+                </div>
+
+                <div style="background:#f9f9f9; padding:15px; border-radius:8px;">
+                    <strong>Karthik M.</strong> <span style="color:#888;">– Aug 3, 2025</span>
+                    <p style="margin-top:8px;">Love the structure and summary table. Useful for frontend learners.</p>
+                </div>
+            </div>
+        </div> -->
+
+        <section class="feedback-section">
+            <div class="container">
+                <h2 class="section-title" style="text-align: center; display: block;">User Feedback & Experiences</h2>
+                <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.1rem;">
+                    Hear what citizens across India have to say about their experiences with government websites and
+                    services.
+                </p>
+
+                <div class="feedback-container">
+                    <div class="carousel">
+                        <div class="carousel-inner" id="carouselInner">
+                            <div class="carousel-item">
+                                <div class="feedback-card">
+                                    <div class="user-avatar">
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                    <h3 class="user-name">Rajesh Sharma</h3>
+                                    <div class="user-role">Business Owner, Mumbai</div>
+                                    <div class="feedback-text">
+                                        The GST portal has completely transformed how I manage my business taxes. What
+                                        used to take days now takes just a few hours. The interface is intuitive, and
+                                        the e-payment system is seamless. My only suggestion would be to add more video
+                                        tutorials for new users.
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="feedback-card">
+                                    <div class="user-avatar">
+                                        <i class="fas fa-user-graduate"></i>
+                                    </div>
+                                    <h3 class="user-name">Priya Patel</h3>
+                                    <div class="user-role">College Student, Ahmedabad</div>
+                                    <div class="feedback-text">
+                                        Applying for scholarships through the National Scholarship Portal was so much
+                                        easier than I expected! The step-by-step guidance was extremely helpful, and I
+                                        received confirmation within two weeks. This digital initiative is a
+                                        game-changer for students from middle-class families.
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="feedback-card">
+                                    <div class="user-avatar">
+                                        <i class="fas fa-user-md"></i>
+                                    </div>
+                                    <h3 class="user-name">Dr. Arvind Kumar</h3>
+                                    <div class="user-role">Doctor, Chennai</div>
+                                    <div class="feedback-text">
+                                        The CoWIN platform for COVID vaccination was remarkably efficient. I was able to
+                                        register my elderly parents and schedule their vaccinations with minimal hassle.
+                                        The certificate download feature is excellent. More such initiatives are needed
+                                        in healthcare!
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-controls">
+                        <button class="carousel-btn" id="prevBtn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn" id="nextBtn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="carousel-indicators" id="indicators">
+                        <div class="indicator active"></div>
+                        <div class="indicator"></div>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-section">
+            <h2 class="section-title">Technology Stack Analysis</h2>
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>Website Type</th>
+                        <th>Landing Page Features</th>
+                        <th>Dashboard Features</th>
+                        <th>Frontend</th>
+                        <th>Backend</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Informational Portal</td>
+                        <td>News, Schemes, Links</td>
+                        <td>Basic or No Dashboard</td>
+                        <td class="tech-stack">
+                            <span class="tech-item">HTML</span>
+                            <span class="tech-item">Bootstrap</span>
+                        </td>
+                        <td class="tech-stack">
+                            <span class="tech-item">PHP</span>
+                            <span class="tech-item">.NET</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Service Portal</td>
+                        <td>Login, Services Overview</td>
+                        <td>Application & Payment Tracking</td>
+                        <td class="tech-stack">
+                            <span class="tech-item">Angular</span>
+                            <span class="tech-item">Bootstrap</span>
+                        </td>
+                        <td class="tech-stack">
+                            <span class="tech-item">Java</span>
+                            <span class="tech-item">Python</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Recruitment Portal</td>
+                        <td>Notifications, Login</td>
+                        <td>Applicant & Exam Dashboard</td>
+                        <td class="tech-stack">
+                            <span class="tech-item">HTML</span>
+                            <span class="tech-item">CSS</span>
+                        </td>
+                        <td class="tech-stack">
+                            <span class="tech-item">PHP</span>
+                            <span class="tech-item">Java</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Grievance Platform</td>
+                        <td>Form, Status Check</td>
+                        <td>Ticket View, Admin Panel</td>
+                        <td class="tech-stack">
+                            <span class="tech-item">HTML</span>
+                            <span class="tech-item">Bootstrap</span>
+                        </td>
+                        <td class="tech-stack">
+                            <span class="tech-item">PHP</span>
+                            <span class="tech-item">Django</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>e-Governance App</td>
+                        <td>Mobile-first, Multiple Services</td>
+                        <td>Interactive User Dashboard</td>
+                        <td class="tech-stack">
+                            <span class="tech-item">React Native</span>
+                            <span class="tech-item">Angular</span>
+                        </td>
+                        <td class="tech-stack">
+                            <span class="tech-item">Node.js</span>
+                            <span class="tech-item">Java</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Popular Platforms</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-arrow-right"></i> UMANG App</a></li>
+                        <li><a href="#"><i class="fas fa-arrow-right"></i> DigiLocker</a></li>
+                        <li><a href="#"><i class="fas fa-arrow-right"></i> e-NAM</a></li>
+                        <li><a href="#"><i class="fas fa-arrow-right"></i> GeM Portal</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-arrow-right"></i> Digital India</a></li>
+                        <li><a href="#"><i class="fas fa-arrow-right"></i> MyGov Initiatives</a></li>
+                        <li><a href="#"><i class="fas fa-arrow-right"></i> National Portal</a></li>
+                        <li><a href="#"><i class="fas fa-arrow-right"></i> Grievance Portal</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-envelope"></i> support@govtech.in</a></li>
+                        <li><a href="#"><i class="fas fa-phone"></i> 1800-123-4567</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> @GovTechIndia</a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i> GovTechIndia</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                © 2025 GovTech India | Digital India Initiative. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carouselInner = document.getElementById('carouselInner');
+            const items = document.querySelectorAll('.carousel-item');
+            const indicators = document.querySelectorAll('.indicator');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            let currentIndex = 0;
+            const itemCount = items.length;
+
+            function updateCarousel() {
+                carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                // Update indicators
+                indicators.forEach((indicator, index) => {
+                    if (index === currentIndex) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+
+            nextBtn.addEventListener('click', function () {
+                currentIndex = (currentIndex + 1) % itemCount;
+                updateCarousel();
+            });
+
+            prevBtn.addEventListener('click', function () {
+                currentIndex = (currentIndex - 1 + itemCount) % itemCount;
+                updateCarousel();
+            });
+
+            // Add click events to indicators
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', function () {
+                    currentIndex = index;
+                    updateCarousel();
+                });
+            });
+
+            // Auto-rotate carousel
+            setInterval(function () {
+                currentIndex = (currentIndex + 1) % itemCount;
+                updateCarousel();
+            }, 5000);
+        });
+    </script>
+</body>
+
+</html>
